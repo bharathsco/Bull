@@ -1,0 +1,21 @@
+{
+  "name": "Bubble",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "content_scripts": [
+  {
+    "matches": ["*://*.wdf.sap.corp/*"],
+    "js": ["content-script.js", "popup.js","background.js"]
+  }
+],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
